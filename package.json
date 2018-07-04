@@ -1,12 +1,12 @@
 {
 	"name": "Faqs",
 	"version": "1.0.0",
-	"description": "",
+	"description": "Metin2 Discord Bot",
 	"main": "Bot.js",
 	"scripts": {
 		"start": "node Bot.js"
 	},
-	"author:", "",
+	"author:", "ImAndreLeandro",
 	"dependencies": {
 		"discord.js": "^11.3.2"
 	}
