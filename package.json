@@ -1,0 +1,13 @@
+{
+	"name": "Faqs",
+	"version": "1.0.0",
+	"description": "",
+	"main": "Bot.js",
+	"scripts": {
+		"start": "node Bot.js"
+	},
+	"author:", "",
+	"dependencies": {
+		"discord.js": "^11.3.2"
+	}
+}
