@@ -19,16 +19,16 @@ exports.run = async(client, message, args) => {
                        + "\n<:Escudo_Lea:467656321102118923> Escudo Leão Angular :arrow_right: Escudo Divino")
       .setTimestamp();
       message.channel.send(emb);
-      const channel = client.channels.get('467660871653654548');
-      if (channel) {
-        const embe = new Discord.RichEmbed()
-          .setAuthor("Comando Transmutações")
-          .setColor([54, 57, 64])
-          .setDescription("User: **" + message.author.username + "**#" + message.author.discriminator
-                         + "\nContent: `" + message.content + "`")
-          .setTimestamp();
-        channel.send(embe);
-      }
     }
+  }
+  const channel = client.channels.get('467660871653654548');
+  if (channel) {
+    const embe = new Discord.RichEmbed()
+      .setAuthor("Comando Transmutações")
+      .setColor([54, 57, 64])
+      .setDescription("User: **" + message.author.username + "**#" + message.author.discriminator
+                     + "\nContent: `" + message.content + "`")
+      .setTimestamp();
+    channel.send(embe);
   }
 }
