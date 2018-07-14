@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 exports.run = async(client, message, args) => {
   const embed = new Discord.RichEmbed()
-    .setAuthor("Transmutações!")
+    .setAuthor("Transmutações!", message.guild.iconURL)
     .setColor([54, 57, 64])
     .setDescription("Veja as transmutações, usando `!transmutações <tópico>`"
                    + "\n\n__**Tópicos:**__"
@@ -11,11 +11,11 @@ exports.run = async(client, message, args) => {
   if (args.length === 1) {
     if (args[0].toLowerCase() == 'escudo' || args[0].toLowerCase() == 'escudos') {
       const emb = new Discord.RichEmbed()
-        .setAuthor("Transmutações")
+        .setAuthor("Transmutações", message.guild.iconURL)
         .setColor([54, 57, 64])
         .setDescription("__**Escudos:**__"
-                       + "\n\nEscudo Falcão :arrow_right: Escudo Universal"
-                       + "\nEscudo Leão Angular :arrow_right: Escudo Divino");
+                       + "\n\n<:Escudo_Falcao:467656321513291796> Escudo Falcão :arrow_right: Escudo Universal"
+                       + "\n<:Escudo_Lea:467656321102118923> Escudo Leão Angular :arrow_right: Escudo Divino");
       message.channel.send(emb);
     }
   }
