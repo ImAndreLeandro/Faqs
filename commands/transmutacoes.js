@@ -22,6 +22,7 @@ exports.run = async(client, message, args) => {
     }
   }
   const channel = client.channels.get('467660871653654548');
+  if (!channel) return;
   const embe = new Discord.RichEmbed()
     .setAuthor("Comando Transmutações")
     .setColor([54, 57, 64])
