@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 exports.run = async(client, message, args) => {
-  const embed = Discord.RichEmbed()
+  const embed = new Discord.RichEmbed()
     .setAuthor("Transmutações!")
     .setColor([54, 57, 64])
     .setDescription("Veja as transmutações, usando `!transmutações <tópico>`"
