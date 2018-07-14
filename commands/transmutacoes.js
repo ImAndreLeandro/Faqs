@@ -16,7 +16,9 @@ exports.run = async(client, message, args) => {
         .setColor([54, 57, 64])
         .setDescription("__**Escudos:**__"
                        + "\n\n<:Escudo_Falcao:467656321513291796> Escudo Falcão :arrow_right: Escudo Universal"
-                       + "\n<:Escudo_Lea:467656321102118923> Escudo Leão Angular :arrow_right: Escudo Divino")
+                       + "\n<:Escudo_Lea:467656321102118923> Escudo Leão Angular :arrow_right: Escudo Divino"
+                       + "\n<:Escudo_Tig:467656321424949248> Escudo Tigre Monge :arrow_right: Escudo Glaciar"
+                       + "\n<:Escudo_Esc:467656321391525888> Escudo Escamas Dragão :arrow_right: Escudo do Caos")
       .setTimestamp();
       message.channel.send(emb);
     }
@@ -25,7 +27,37 @@ exports.run = async(client, message, args) => {
         .setAuthor("Transmutações", message.guild.iconURL)
         .setColor([54, 57, 64])
         .setDescription("__**Pulseiras:**__"
-                       + "\n\n<:Pulseira_Safira:467671920012296193> Pulseira Safira :arrow_right: Pulseira Universal")
+                       + "\n\n<:Pulseira_Safira:467671920012296193> Pulseira de Safira :arrow_right: Pulseira Universal")
+      .setTimestamp();
+      message.channel.send(emb);
+    }
+    if (args[0].toLowerCase() == 'colar' || args[0].toLowerCase() == 'colares') {
+      const emb = new Discord.RichEmbed()
+        .setAuthor("Transmutações", message.guild.iconURL)
+        .setColor([54, 57, 64])
+        .setDescription("__**Colares:**__"
+                       + "\n\n<:Colar_Saf:467679303916584980> Colar de Safira :arrow_right: Colar da Dor")
+      .setTimestamp();
+      message.channel.send(emb);
+    }
+    if (args[0].toLowerCase() == 'sapato' || args[0].toLowerCase() == 'sapatos') {
+      const emb = new Discord.RichEmbed()
+        .setAuthor("Transmutações", message.guild.iconURL)
+        .setColor([54, 57, 64])
+        .setDescription("__**Sapatos:**__"
+                       + "\n\n<:Sapatos_Kirin:467679864128798720> Sapatos Kirin :arrow_right: Sapatos de Fogo")
+      .setTimestamp();
+      message.channel.send(emb);
+    }
+    if (args[0].toLowerCase() == 'elmo' || args[0].toLowerCase() == 'elmos') {
+      const emb = new Discord.RichEmbed()
+        .setAuthor("Transmutações", message.guild.iconURL)
+        .setColor([54, 57, 64])
+        .setDescription("__**Escudos:**__"
+                       + "\n\n<:Elmo_Condestavel:467681134986395658> Elmo Condestável :arrow_right: Elmo Pacífico"
+                       + "\n<:Capuz_Ara:467681134663434261> Capuz Aranha :arrow_right: Capuz Oricalcus"
+                       + "\n<:Chapeu_Das_Alm:467681134910636062> Chapéu das Almas :arrow_right: Elmo da Dor"
+                       + "\n<:Elmo_Mag:467681134940127242> Elmo Mágico :arrow_right: Elmo Destemido")
       .setTimestamp();
       message.channel.send(emb);
     }
