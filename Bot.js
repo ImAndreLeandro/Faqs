@@ -14,32 +14,21 @@ client.on("ready", () => {
 });
 
 client.on("message", async message => {
-	if (message.author.bot) return;
-	if(message.content.indexOf(config.prefix) !== 0) return;
+	let msg = message.content.toLowerCase();
+	if (message.author.bot) return undefined;
+	
+  
+	if (message.content.indexOf(config.prefix) !== 0) return;
 	const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
 	const command = args.shift().toLowerCase();
-
-	if (command == "ping") {
-		const m = await message.channel.send("Calculating...");
-		const embed = {
-			author: {
-				name: `📈 Latency!`,
-				icon_url: client.user.avatarURL
-			},
-			description: `Pong! :ping_pong: \nLatency is **${m.createdTimestamp - message.createdTimestamp}**ms.\nAPI Latency is **${Math.round(client.ping)}**ms.`,
-			color: 569815,
-      		timestamp: new Date()
-		};
-		m.edit({embed});
-	}
-
-	if (command == "eventos") {
-		const embed = {
-			description: `Eventos!`,
-			color: 569815
-		};
-		await message.channel.send({embed});
-	}
+    
+	  try {
+	    let commands = require(`./commands/${command}.js`);
+	    commands.run(client, message, args);
+	  } catch (e) {
+	    console.log(e);
+	  } finally {
+	  }
 
 });
 
