@@ -22,13 +22,11 @@ exports.run = async(client, message, args) => {
     }
   }
   const channel = client.channels.get('467660871653654548');
-  if (channel) {
-    const embe = new Discord.RichEmbed()
-      .setAuthor("Comando Transmutações")
-      .setColor([54, 57, 64])
-      .setDescription("User: **" + message.author.username + "**#" + message.author.discriminator
-                     + "\nContent: `" + message.content + "`")
-      .setTimestamp();
-    channel.send(embe);
-  }
+  const embe = new Discord.RichEmbed()
+    .setAuthor("Comando Transmutações")
+    .setColor([54, 57, 64])
+    .setDescription("User: **" + message.author.username + "**#" + message.author.discriminator
+                   + "\nContent: `" + message.content + "`")
+    .setTimestamp();
+  channel.send(embe);
 }
