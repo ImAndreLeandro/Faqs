@@ -20,6 +20,15 @@ exports.run = async(client, message, args) => {
       .setTimestamp();
       message.channel.send(emb);
     }
+    if (args[0].toLowerCase() == 'pulseira' || args[0].toLowerCase() == 'pulseiras') {
+      const emb = new Discord.RichEmbed()
+        .setAuthor("Transmutações", message.guild.iconURL)
+        .setColor([54, 57, 64])
+        .setDescription("__**Pulseiras:**__"
+                       + "\n\n<:Pulseira_Safira:467671920012296193> Pulseira Safira :arrow_right: Pulseira Universal")
+      .setTimestamp();
+      message.channel.send(emb);
+    }
   }
   const channel = client.channels.get('467660871653654548');
   if (!channel) return;
