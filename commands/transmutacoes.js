@@ -16,6 +16,7 @@ exports.run = async(client, message, args) => {
         .setDescription("__**Escudos:**__"
                        + "\n\nEscudo Falcão :arrow_right: Escudo Universal"
                        + "\nEscudo Leão Angular :arrow_right: Escudo Divino");
+      message.channel.send(emb);
     }
   }
 }
